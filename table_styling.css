@@ -3,7 +3,7 @@
 }
 
 .calc_display{
-    margin-right: 0;
+    align-self: center;
 }
 .calc_display td input{
     text-align: right;
@@ -12,5 +12,5 @@
 
 .calc_tDisplay{
     text-align: center;
-    width: 100%;
+    
 }
