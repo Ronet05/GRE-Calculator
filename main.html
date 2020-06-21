@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GRE Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <link href="table_styling.css" rel="stylesheet">
+    <script src="calcFunctions.js"></script>
+
+</head>
+
+<body>
+    <script>
+        var stringToEval = "";
+        var displayString = "";
+
+    </script>
+    <table>
+        <tr class="calc_display">
+            <td colspan="5"><input type="text" maxlength="8" placeholder="0." id="showDisplay"></td>
+        </tr>
+        <tr class="calc_row">
+            <td><input type="button" id="MR" value="MR"></td>
+            <td><input type="button" id="MC" value="MC"></td>
+            <td><input type="button" id="M+" value="M+"></td>
+            <td><input type="button" id="leftBracket" value="(" onclick="addToString('(')"></td>
+            <td><input type="button" id="rightBracket" value=")" onclick="addToString(')')"></td>
+
+        </tr>
+        <tr class="calc_row">
+            <td><input type="button" id="number7" value="7" onclick="addToString('7')"></td>
+            <td><input type="button" id="number8" value="8" onclick="addToString('8')"></td>
+            <td><input type="button" id="number9" value="9" onclick="addToString('9')"></td>
+            <td><input type="button" id="divide" value="/" onclick="divide()"></td>
+            <td><input type="button" id="clear" value="C" onclick="reset()"></td>
+
+        </tr>
+        <tr class="calc_row">
+            <td><input type="button" id="number4" value="4" onclick="addToString('4')"></td>
+            <td><input type="button" id="number5" value="5" onclick="addToString('5')"></td>
+            <td><input type="button" id="number6" value="6" onclick="addToString('6')"></td>
+            <td><input type="button" id="multiply" value="*" onclick="multiply()"></td>
+            <td><input type="button" id="clearEntry" value="CE" onclick="resetLastDigit()"></td>
+
+        </tr>
+        <tr class="calc_row">
+            <td><input type="button" id="number1" value="1" onclick="addToString('1')"></td>
+            <td><input type="button" id="number2" value="2" onclick="addToString('2')"></td>
+            <td><input type="button" id="number3" value="3" onclick="addToString('3')"></td>
+            <td><input type="button" id="subtract" value="-" onclick="subtract()"></td>
+            <td><input type="button" id="sqrt" value="&#8730" onclick="takeSqrt()"></td>
+
+        </tr>
+        <tr class="calc_row">
+            <td><input type="button" id="plusminus" value="&#8723"></td>
+            <td><input type="button" id="number0" value="0" onclick="addToString('0')"></td>
+            <td><input type="button" id="decimal" value="." onclick="addToString('.')"></td>
+            <td><input type="button" id="sum" value="+" onclick="add()"></td>
+            <td><input type="button" id="equals" value="=" onclick="equalsTo(stringToEval)"></td>
+        </tr>
+        <tr class="calc_tDisplay">
+            <td colspan="5"><input type="button" id="transferDisplay" value="Transfer Display"></td>
+        </tr>
+
+    </table>
+    
+
+</body>
+
+</html>

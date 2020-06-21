@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Resize window</title></head>
+    <body>
+        <input value="Open Calculator" onclick="openWindow()" type="button">
+        <script>
+            var calcWindow;
+            function openWindow(){
+                calcWindow = window.open("main.html", "_blank", "height=250, width=250");
+            }
+        </script>
+    </body>
+    </html>
